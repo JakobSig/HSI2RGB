@@ -95,7 +95,7 @@ sRGB(sRGB>1)=1;
 sRGB(sRGB<0)=0;
 
 if (thresholdRGB>0)
-thres=0.002;
+thres=thresholdRGB;
 for idx=1:3
     y=sRGB(idx,:);
     [a,b]=hist(y(y>0),100);

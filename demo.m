@@ -20,8 +20,8 @@ end
 illuminant=65;
 
 % do minor thresholding
-dothreshold=1;
+threshold=0.002;
 
 %Create the RBG image, 
-[RGB,XYZ]=HSI2RGB(wl,Z,ydim,xdim,illuminant,dothreshold);
+[RGB,XYZ]=HSI2RGB(wl,Z,ydim,xdim,illuminant,threshold);
 imagesc(RGB)
