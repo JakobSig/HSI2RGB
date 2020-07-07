@@ -3,7 +3,7 @@ function [RGB,XYZ]=HSI2RGB(wY,Y,ydim,xdim,d,thresholdRGB)
 % Y : HSI as a (#pixels x #bands) matrix,
 % dims: x & y dimension of image
 % d: 50, 55, 65, 75, determines the illuminant used, if in doubt use d65
-% thresholdRGB : 1 if thesholding should be done to increase contrast
+% thresholdRGB : set to small value greater than 0 if thesholding should be done to increase contrast 
 %
 %
 % If you use this method, please cite the following paper:
@@ -124,20 +124,3 @@ RGB(:,:,3)=reshape(sRGB(3,:),ydim,xdim);
 
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
