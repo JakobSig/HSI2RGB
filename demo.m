@@ -1,5 +1,5 @@
 load washington_hsi.mat
-% Y holds the HSI (uint8 to save space
+% Y holds the HSI (uint8 to save space)
 % wl holds the wavelengths of the spectral bands
 % The image is 307x307 pixels
 % The illuminant used is D65
@@ -20,8 +20,8 @@ end
 illuminant=65;
 
 % do minor thresholding
-dothreshold=1;
+threshold=0.002;
 
 %Create the RBG image, 
-[RGB,XYZ]=HSI2RGB(wl,Z,ydim,xdim,illuminant,dothreshold);
+[RGB,XYZ]=HSI2RGB(wl,Z,ydim,xdim,illuminant,threshold);
 imagesc(RGB)
