@@ -1,5 +1,5 @@
 # HSI2RGB
-Create quality RGB images using remote sensing hyperspectral images. Matlab and Pythin code is available
+Create quality RGB images using remote sensing hyperspectral images. Matlab and Python code is available
 
 If you use this method, please cite the following paper:
 
