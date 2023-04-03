@@ -2,6 +2,7 @@ import numpy as np
 import scipy.io as spio
 from scipy.interpolate import PchipInterpolator
 from bisect import bisect
+import os
 
 def HSI2RGB(wY,HSI,ydim,xdim,d,threshold):
 # wY: wavelengths in nm
@@ -31,7 +32,8 @@ def HSI2RGB(wY,HSI,ydim,xdim,d,threshold):
 
     
     # Load reference illuminant
-    D = spio.loadmat('./D_illuminants.mat')
+    D_path = os.path.join(os.path.dirname(__file__), 'D_illuminants.mat')
+    D = spio.loadmat(D_path)
     w = D['wxyz'][:,0]
     x = D['wxyz'][:,1]
     y = D['wxyz'][:,2]
